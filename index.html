@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Blog - Prathamesh Khanvilkar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Prathamesh Khanvilkar</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+              <!--  <li><a href="../downloads/index.html">Downloads</a></li> -->
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Security Blog & Research</h1>
+            <p>In-depth technical articles, project writeups, and security research findings</p>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-container">
+                <div class="blog-sidebar">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#" data-category="security-writeups" class="active">Security Writeups</a></li>
+                    </ul>
+                    
+                    <h3>Recent Posts</h3>
+                    <div class="recent-posts">
+                        <a href="wifi-hacking-nodemcu.html" class="recent-post">
+                            <span class="recent-date">Sep 10</span>
+                            <span class="recent-title">WiFi Hacking NodeMCU</span>
+                        </a>
+                        <a href="badusb-raspberry-pi.html" class="recent-post">
+                            <span class="recent-date">Sep 8</span>
+                            <span class="recent-title">BadUSB Raspberry Pi</span>
+                        </a>
+                        <a href="rf-car-key-testing.html" class="recent-post">
+                            <span class="recent-date">Sep 5</span>
+                            <span class="recent-title">RF Car Key Testing</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-content">
+                    <article class="blog-post-full" data-category="security-writeups">
+                        <div class="post-meta">
+                            <span class="post-date">September 10, 2025</span>
+                            <span class="post-category">Security Writeups</span>
+                            <span class="read-time">15 min read</span>
+                        </div>
+                        <h2>WiFi Hacking with NodeMCU ESP8266: Complete Guide</h2>
+                        <div class="post-excerpt">
+                            <p>Comprehensive guide to building a WiFi penetration testing toolkit using NodeMCU ESP8266. Learn how to create deauth attacks, evil twin access points, and captive portal deployment for authorized wireless security testing in educational environments.</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">NodeMCU ESP8266</span>
+                            <span class="tag">WiFi Security</span>
+                            <span class="tag">Arduino IDE</span>
+                        </div>
+                        <a href="wifi-hacking-nodemcu.html" class="read-more" style="pointer-events: auto !important;">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-post-full" data-category="security-writeups">
+                        <div class="post-meta">
+                            <span class="post-date">September 8, 2025</span>
+                            <span class="post-category">Security Writeups</span>
+                            <span class="read-time">12 min read</span>
+                        </div>
+                        <h2>BadUSB Attacks with Raspberry Pi Zero W: USB HID Exploitation</h2>
+                        <div class="post-excerpt">
+                            <p>Step-by-step tutorial on creating a BadUSB device using Raspberry Pi Zero W for keystroke injection attacks. Covers payload development, HID configuration, and advanced persistence techniques for authorized red team operations and physical security testing.</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">Raspberry Pi Zero W</span>
+                            <span class="tag">USB HID</span>
+                            <span class="tag">Physical Security</span>
+                        </div>
+                        <a href="badusb-raspberry-pi.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-post-full" data-category="security-writeups">
+                        <div class="post-meta">
+                            <span class="post-date">September 5, 2025</span>
+                            <span class="post-category">Security Writeups</span>
+                            <span class="read-time">18 min read</span>
+                        </div>
+                        <h2>RF Car Key Hacking: M5StickC Plus2 + CC1101 Module Analysis</h2>
+                        <div class="post-excerpt">
+                            <p>Deep dive into automotive RF security testing using M5StickC Plus2 and CC1101 module. Learn signal analysis, recording and replay attacks, frequency hopping techniques for authorized vehicle security assessments in controlled environments.</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">M5StickC Plus2</span>
+                            <span class="tag">CC1101 Module</span>
+                            <span class="tag">RF Security</span>
+                        </div>
+                        <a href="rf-car-key-testing.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-post-full" data-category="security-writeups">
+                        <div class="post-meta">
+                            <span class="post-date">September 3, 2025</span>
+                            <span class="post-category">Security Writeups</span>
+                            <span class="read-time">14 min read</span>
+                        </div>
+                        <h2>RFID Access Card Cloning: M5StickC Plus2 Security Testing</h2>
+                        <div class="post-excerpt">
+                            <p>Learn how to build RFID security testing tools using M5StickC Plus2 and RFID modules. Covers proximity card analysis, cloning techniques, and NFC security assessment for authorized physical security testing of access control systems.</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">M5StickC Plus2</span>
+                            <span class="tag">RFID Security</span>
+                            <span class="tag">Access Control</span>
+                        </div>
+                        <a href="rfid-access-card-cloning.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-post-full" data-category="security-writeups">
+                        <div class="post-meta">
+                            <span class="post-date">September 1, 2025</span>
+                            <span class="post-category">Security Writeups</span>
+                            <span class="read-time">16 min read</span>
+                        </div>
+                        <h2>BLE Penetration & Jamming: M5StickC Plus2 + NRF24L01 Testing Kit</h2>
+                        <div class="post-excerpt">
+                            <p>Comprehensive guide to Bluetooth Low Energy security testing using M5StickC Plus2 and NRF24L01 module. Learn BLE device enumeration, packet sniffing, jamming techniques, and connection hijacking for IoT security assessments.</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">M5StickC Plus2</span>
+                            <span class="tag">BLE Security</span>
+                            <span class="tag">IoT Testing</span>
+                        </div>
+                        <a href="ble-penetration-jamming.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    
+                    <article class="blog-post-full" data-category="security-writeups">
+                        <div class="post-meta">
+                            <span class="post-date">August 28, 2025</span>
+                            <span class="post-category">Security Writeups</span>
+                            <span class="read-time">10 min read</span>
+                        </div>
+                        <h2>Custom Evil Portal Collection: Advanced Social Engineering</h2>
+                        <div class="post-excerpt">
+                            <p>Building realistic captive portal collections for authorized penetration testing engagements. Learn Flask development techniques, UI design principles matching legitimate services, and deployment strategies for educational security demonstrations.</p>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Social Engineering</span>
+                            <span class="tag">Web Development</span>
+                        </div>
+                        <a href="custom-evil-portals.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Prathamesh Khanvilkar - Cybersecurity Professional. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

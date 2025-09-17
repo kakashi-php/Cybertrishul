@@ -1,0 +1,1149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #0a0a0a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: background 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ff41;
+    text-decoration: none;
+}
+
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #00ff41;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.1;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    color: #00ff41;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.hero .description {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 10px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 255, 65, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #00ff41;
+    color: #00ff41;
+}
+
+.section {
+    padding: 100px 0;
+    background: #111;
+}
+
+.section:nth-child(even) {
+    background: #0f0f0f;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #00ff41;
+    margin: 1rem auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff41;
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: #00ff41;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff41;
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #00ff41;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-content p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    color: #00ff41;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #fff;
+}
+
+/* Blog Section Styles */
+.blog-preview {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.blog-posts-preview {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blog-cta, .downloads-cta {
+    text-align: center;
+    margin-top: 3rem; /* Add space above the View All Downloads button */
+}
+
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.blog-sidebar {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    height: fit-content;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.blog-sidebar h3 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.category-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.category-list li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.category-list a:hover,
+.category-list a.active {
+    color: #00ff41;
+    background: rgba(0, 255, 65, 0.1);
+}
+
+.recent-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.recent-post {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.recent-post:hover {
+    background: rgba(0, 255, 65, 0.1);
+}
+
+.recent-date {
+    font-size: 0.8rem;
+    color: #00ff41;
+}
+
+.recent-title {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.blog-post, .blog-post-full {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover, .blog-post-full:hover {
+    transform: translateY(-5px);
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.post-date {
+    color: #00ff41;
+}
+
+.post-category {
+    color: #ccc;
+}
+
+.read-time {
+    color: #999;
+}
+
+.blog-post h3, .blog-post-full h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-excerpt p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    color: #00ff41;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #fff;
+}
+
+/* Downloads Section Styles */
+.downloads-preview {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.download-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.download-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff41;
+}
+
+.download-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem 0;
+}
+
+.download-icon {
+    font-size: 3rem;
+    color: #00ff41;
+}
+
+.download-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: right;
+}
+
+.download-content {
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+}
+
+.download-card h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.download-card p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.download-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature {
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.download-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.download-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.file-type, .file-size {
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+}
+
+.download-actions {
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.download-btn {
+    flex: 1;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.download-btn.primary {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000;
+}
+
+.download-btn.secondary {
+    background: transparent;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    transition: transform 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff41;
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    color: #00ff41;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.achievement-card p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Page Header Styles */
+.page-header {
+    padding: 150px 0 50px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    text-align: center;
+}
+
+.page-header h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+/* Blog Article Styles */
+.blog-article {
+    padding-top: 100px;
+    background: #111;
+    min-height: 100vh;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #00ff41;
+    text-decoration: none;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.article-header h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.article-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 65, 0.05);
+    border-left: 4px solid #00ff41;
+    border-radius: 5px;
+}
+
+.article-content h2 {
+    color: #fff;
+    margin: 2.5rem 0 1rem;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.article-content h3 {
+    color: #fff;
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.article-content ul, .article-content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+}
+
+.toc {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.toc li {
+    margin-bottom: 0.5rem;
+}
+
+.toc a {
+    color: #00ff41;
+    text-decoration: none;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+.warning-box, .info-box {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.warning-box i {
+    color: #ffc107;
+    margin-right: 0.5rem;
+}
+
+.info-box {
+    background: rgba(0, 255, 65, 0.1);
+    border-left-color: #00ff41;
+}
+
+.info-box h4 {
+    color: #00ff41;
+    margin-bottom: 1rem;
+}
+
+pre {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+code {
+    background: #1a1a1a;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    color: #00ff41;
+}
+
+.article-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.share-buttons {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.share-buttons span {
+    margin-right: 1rem;
+    color: #ccc;
+}
+
+.share-btn {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.share-btn:hover {
+    background: rgba(0, 255, 65, 0.3);
+}
+
+.related-posts h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.related-post {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    transition: transform 0.3s;
+}
+
+.related-post:hover {
+    transform: translateY(-2px);
+    border-color: #00ff41;
+}
+
+.related-title {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.related-excerpt {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Downloads Page Specific */
+.downloads-section {
+    padding: 50px 0 100px;
+    background: #111;
+}
+
+.downloads-categories {
+    margin-bottom: 3rem;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid rgba(0, 255, 65, 0.3);
+    color: #ccc;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    border-color: #00ff41;
+    color: #00ff41;
+    background: rgba(0, 255, 65, 0.1);
+}
+
+.footer {
+    background: #000;
+    color: #ccc;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00ff41;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    .hero .subtitle { 
+        font-size: 1.2rem; 
+    }
+    
+    .section-title { 
+        font-size: 2rem; 
+    }
+    
+    .nav-menu { 
+        display: none; 
+    }
+    
+    .blog-container { 
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+    
+    .blog-sidebar { 
+        order: 2; 
+    }
+    
+    .article-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero .description {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        display: block;
+        margin: 0.5rem auto;
+        text-align: center;
+    }
+    
+    .skills-grid,
+    .projects-grid,
+    .downloads-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+/* Reduce section spacing */
+.section {
+    padding: 4rem 0; /* Reduced from default (usually 6rem or 8rem) */
+}
+
+/* Specific spacing adjustments for better flow */
+#projects {
+    padding-bottom: 3rem;
+}
+
+#blog {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#downloads {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#achievements {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#contact {
+    padding-top: 3rem;
+}
+
+/* Reduce title margins */
+.section-title {
+    margin-bottom: 2rem; /* Reduced from default */
+}
+.animate-text {
+    animation: typewriter 3s steps(25) 1s both;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Hero Section */
+    .hero-content {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero .description {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Buttons */
+    .btn {
+        display: block;
+        margin: 0.5rem 0;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Grids */
+    .skills-grid,
+    .projects-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Cards */
+    .skill-card,
+    .project-card,
+    .achievement-card {
+        padding: 1.5rem;
+    }
+    
+    /* Section padding */
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Typography */
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    /* Blog posts */
+    .blog-posts-preview {
+        gap: 1.5rem;
+    }
+    
+    /* Contact section */
+    .social-links a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    /* Downloads section */
+    .download-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .download-actions {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .skill-card,
+    .project-card {
+        padding: 1rem;
+    }
+}
